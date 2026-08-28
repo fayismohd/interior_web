@@ -1,0 +1,342 @@
+.custom-design-section {
+  background-color: var(--bg-secondary);
+  overflow: hidden;
+  padding: 100px 0;
+}
+
+.custom-design-top {
+  position: relative;
+  height: 580px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding-top: 220px;
+}
+
+/* Arc Layout for Desktop */
+.arc-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none; /* Let clicks pass through to container, except cards */
+}
+
+.arc-image-card {
+  position: absolute;
+  width: 160px;
+  height: 160px;
+  border-radius: 30px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  transition: var(--transition-smooth);
+  cursor: pointer;
+  background-color: #ffffff;
+  pointer-events: auto; /* Re-enable pointer events for cards */
+}
+
+.arc-image-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Individual positions forming a beautiful arch */
+.arc-img-1 {
+  bottom: -30px;
+  left: -4%;
+  transform: rotate(-35deg);
+}
+
+.arc-img-2 {
+  bottom: 120px;
+  left: 6%;
+  transform: rotate(-25deg);
+}
+
+.arc-img-3 {
+  bottom: 270px;
+  left: 18%;
+  transform: rotate(-15deg);
+}
+
+.arc-img-4 {
+  bottom: 370px;
+  left: 31%;
+  transform: rotate(-6deg);
+}
+
+.arc-img-5 {
+  bottom: 370px;
+  right: 31%;
+  transform: rotate(6deg);
+}
+
+.arc-img-6 {
+  bottom: 270px;
+  right: 18%;
+  transform: rotate(15deg);
+}
+
+.arc-img-7 {
+  bottom: 120px;
+  right: 6%;
+  transform: rotate(25deg);
+}
+
+.arc-img-8 {
+  bottom: -30px;
+  right: -4%;
+  transform: rotate(35deg);
+}
+
+/* Hover straightening and zoom micro-interaction */
+.arc-image-card:hover {
+  z-index: 50;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.arc-img-1:hover { transform: scale(1.1) rotate(0deg); }
+.arc-img-2:hover { transform: scale(1.1) rotate(0deg); }
+.arc-img-3:hover { transform: scale(1.1) rotate(0deg); }
+.arc-img-4:hover { transform: scale(1.1) rotate(0deg); }
+.arc-img-5:hover { transform: scale(1.1) rotate(0deg); }
+.arc-img-6:hover { transform: scale(1.1) rotate(0deg); }
+.arc-img-7:hover { transform: scale(1.1) rotate(0deg); }
+.arc-img-8:hover { transform: scale(1.1) rotate(0deg); }
+
+/* Central Content */
+.custom-design-cta {
+  position: relative;
+  z-index: 30;
+  text-align: center;
+  max-width: 650px;
+  padding: 24px;
+  margin-top: 20px;
+}
+
+.custom-design-heading {
+  font-size: clamp(2.2rem, 4vw, 3.2rem);
+  font-weight: 600;
+  line-height: 1.2;
+  color: var(--text-primary);
+  margin-bottom: 16px;
+  letter-spacing: -0.01em;
+}
+
+.custom-design-heading .serif-italic {
+  display: inline-block;
+  font-style: italic;
+  font-weight: 400;
+  color: inherit;
+  font-family: var(--font-serif);
+}
+
+.custom-design-subtext {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  margin-bottom: 32px;
+  line-height: 1.6;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.custom-design-btn {
+  display: flex;
+  justify-content: center;
+}
+
+/* Bottom Metrics Row */
+.custom-design-bottom {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding-top: 60px;
+  margin-top: 60px;
+}
+
+.metric-column {
+  text-align: center;
+  padding: 10px 30px;
+}
+
+.metric-column:not(:last-child) {
+  border-right: 1px solid rgba(28, 26, 23, 0.1);
+}
+
+.metric-title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 12px;
+  font-family: var(--font-sans);
+}
+
+.metric-desc {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: var(--text-secondary);
+  max-width: 280px;
+  margin: 0 auto;
+}
+
+/* Responsiveness */
+@media (max-width: 1200px) {
+  .custom-design-top {
+    height: 500px;
+  }
+  
+  .arc-image-card {
+    width: 130px;
+    height: 130px;
+    border-radius: 22px;
+  }
+  
+  .custom-design-heading {
+    font-size: clamp(2rem, 3.5vw, 2.8rem);
+  }
+  
+  /* Adjusted positions for medium screens */
+  .arc-img-1 { bottom: -20px; left: -3%; }
+  .arc-img-2 { bottom: 100px; left: 7%; }
+  .arc-img-3 { bottom: 230px; left: 19%; }
+  .arc-img-4 { bottom: 320px; left: 32%; }
+  .arc-img-5 { bottom: 320px; right: 32%; }
+  .arc-img-6 { bottom: 230px; right: 19%; }
+  .arc-img-7 { bottom: 100px; right: 7%; }
+  .arc-img-8 { bottom: -20px; right: -3%; }
+}
+
+@media (max-width: 1024px) {
+  .custom-design-top {
+    height: 440px;
+  }
+  
+  .arc-image-card {
+    width: 110px;
+    height: 110px;
+    border-radius: 18px;
+  }
+  
+  .custom-design-bottom {
+    gap: 15px;
+    padding-top: 40px;
+    margin-top: 40px;
+  }
+  
+  .metric-column {
+    padding: 10px 15px;
+  }
+
+  /* Adjusted positions for smaller screens */
+  .arc-img-1 { bottom: -15px; left: -2%; }
+  .arc-img-2 { bottom: 80px; left: 8%; }
+  .arc-img-3 { bottom: 190px; left: 20%; }
+  .arc-img-4 { bottom: 270px; left: 33%; }
+  .arc-img-5 { bottom: 270px; right: 33%; }
+  .arc-img-6 { bottom: 190px; right: 20%; }
+  .arc-img-7 { bottom: 80px; right: 8%; }
+  .arc-img-8 { bottom: -15px; right: -2%; }
+}
+
+@media (max-width: 768px) {
+  .custom-design-section {
+    padding: 60px 0;
+  }
+  
+  .custom-design-top {
+    height: auto;
+    padding: 20px 0;
+    gap: 40px;
+  }
+  
+  .arc-wrapper {
+    position: static;
+    display: flex;
+    gap: 16px;
+    overflow-x: auto;
+    padding: 10px 20px 20px;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    pointer-events: auto;
+    width: 100vw;
+    margin-left: -20px; /* Offset container padding */
+  }
+  
+  .arc-wrapper::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .arc-image-card {
+    position: static;
+    flex: 0 0 120px;
+    width: 120px;
+    height: 120px;
+    border-radius: 20px;
+    transform: none !important;
+  }
+  
+  .arc-image-card:hover {
+    transform: scale(1.05) !important;
+  }
+  
+  .custom-design-cta {
+    padding: 0;
+    max-width: 100%;
+  }
+  
+  .custom-design-heading {
+    font-size: clamp(1.8rem, 6vw, 2.2rem);
+    margin-bottom: 16px;
+  }
+  
+  .custom-design-subtext {
+    font-size: 0.9rem;
+    margin-bottom: 24px;
+  }
+  
+  .custom-design-bottom {
+    grid-template-columns: 1fr;
+    gap: 0;
+    padding-top: 30px;
+    margin-top: 30px;
+  }
+  
+  .metric-column {
+    padding: 20px 0;
+  }
+  
+  .metric-column:not(:last-child) {
+    border-right: none;
+    border-bottom: 1px solid rgba(28, 26, 23, 0.08);
+  }
+  
+  .metric-title {
+    font-size: 1.2rem;
+    margin-bottom: 8px;
+  }
+  
+  .metric-desc {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .custom-design-section {
+    padding: 40px 0;
+  }
+  
+  .arc-image-card {
+    flex: 0 0 100px;
+    width: 100px;
+    height: 100px;
+    border-radius: 16px;
+  }
+  
+  .custom-design-heading {
+    font-size: 1.6rem;
+  }
+}

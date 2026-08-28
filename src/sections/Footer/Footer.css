@@ -1,0 +1,243 @@
+.footer-section {
+  background-color: var(--bg-dark);
+  color: var(--text-light);
+  padding-top: 80px;
+  padding-bottom: 40px;
+}
+
+/* CTA Header Row */
+.footer-header-cta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 40px;
+}
+
+.footer-cta-title {
+  font-size: clamp(1.6rem, 3.5vw, 2.5rem);
+  font-weight: 700;
+  line-height: 1.25;
+  color: var(--text-light);
+}
+
+.footer-cta-title .gold-text {
+  color: var(--accent-gold);
+}
+
+.footer-cta-title .serif-italic {
+  display: inline-block;
+  font-weight: 400;
+}
+
+.footer-divider {
+  border: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Main Grid Layout */
+.footer-top {
+  display: grid;
+  grid-template-columns: 1.1fr 0.8fr 1.7fr 1.4fr;
+  gap: 50px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.footer-brand-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.footer-logo-text {
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  color: var(--text-light);
+}
+
+.footer-summary {
+  font-size: 0.9rem;
+  line-height: 1.7;
+  color: var(--text-muted);
+  margin-top: 20px;
+  max-width: 280px;
+}
+
+.footer-col-title {
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: var(--text-light);
+  margin-bottom: 28px;
+  text-transform: uppercase;
+}
+
+/* Links List */
+.footer-links {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.footer-links a {
+  color: var(--text-muted);
+  font-size: 0.92rem;
+  transition: var(--transition-fast);
+  display: inline-block;
+}
+
+.footer-links a:hover {
+  color: var(--accent-gold);
+  transform: translateX(4px);
+}
+
+/* Services 2-Column Grid */
+.footer-services-list {
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr 1.05fr;
+  gap: 12px 24px;
+}
+
+.footer-services-list a {
+  color: var(--text-muted);
+  font-size: 0.92rem;
+  transition: var(--transition-fast);
+  display: inline-block;
+  white-space: nowrap;
+}
+
+.footer-services-list a:hover {
+  color: var(--accent-gold);
+  transform: translateX(4px);
+}
+
+/* Contact List with Icons */
+.footer-contact-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contact-row-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.contact-icon-box {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.05);
+  color: var(--accent-gold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.contact-icon-box svg {
+  width: 20px;
+  height: 20px;
+}
+
+.contact-row-text {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.contact-label {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.contact-val-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.contact-val {
+  font-size: 0.92rem;
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.45;
+  font-weight: 500;
+}
+
+.contact-row-text a.contact-val {
+  transition: var(--transition-fast);
+}
+
+.contact-row-text a.contact-val:hover {
+  color: var(--accent-gold);
+}
+
+/* Bottom Copyright */
+.footer-bottom {
+  text-align: center;
+  padding-top: 30px;
+}
+
+.copyright-text {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+/* Responsiveness */
+@media (max-width: 1100px) {
+  .footer-top {
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer-section {
+    padding-top: 50px;
+    padding-bottom: 30px;
+  }
+
+  .footer-header-cta {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+  
+  .footer-top {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+  
+  .footer-services-list {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+  
+  .footer-col-title {
+    margin-bottom: 16px;
+  }
+
+  .footer-summary {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-services-list a {
+    white-space: normal;
+  }
+}

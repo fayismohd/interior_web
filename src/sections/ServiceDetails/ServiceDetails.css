@@ -1,0 +1,364 @@
+.service-details-section {
+  background: #fff;
+}
+
+.service-details-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.service-details-tag {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.service-details-tag .section-tag-logo {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+}
+
+.service-details-tag .tag-label {
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #8b6f47;
+}
+
+.service-details-heading {
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #1a1a1a;
+}
+
+.service-details-heading .serif-italic {
+  font-style: italic;
+  color: #8b6f47;
+}
+
+.service-details-subtitle {
+  font-size: 16px;
+  color: #666;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Services Grid */
+.services-details-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 30px;
+  margin-bottom: 60px;
+}
+
+.service-detail-card {
+  background: #f9f7f4;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  border: 1px solid #e8e4df;
+}
+
+.service-detail-card:hover {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transform: translateY(-5px);
+}
+
+.service-detail-card.expanded {
+  grid-column: span 1;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.detail-card-image {
+  position: relative;
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+  background: #e8e4df;
+}
+
+.detail-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.service-detail-card:hover .detail-card-image img {
+  transform: scale(1.05);
+}
+
+.detail-card-image .service-number {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: #8b6f47;
+  color: #fff;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.detail-card-content {
+  padding: 30px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.detail-card-title {
+  font-size: 22px;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 10px;
+}
+
+.detail-card-short-desc {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.expanded-content {
+  animation: slideDown 0.3s ease;
+  margin-bottom: 20px;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    max-height: 0;
+  }
+  to {
+    opacity: 1;
+    max-height: 500px;
+  }
+}
+
+.detail-card-full-desc {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+
+.features-section {
+  margin-bottom: 25px;
+}
+
+.features-section h4 {
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #1a1a1a;
+  margin-bottom: 15px;
+}
+
+.features-list {
+  list-style: none;
+  padding: 0;
+}
+
+.features-list li {
+  font-size: 13px;
+  color: #666;
+  padding: 8px 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.feature-icon {
+  color: #8b6f47;
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.price-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0;
+  border-top: 1px solid #e8e4df;
+  margin-top: 20px;
+}
+
+.service-price {
+  font-size: 16px;
+  font-weight: 700;
+  color: #8b6f47;
+}
+
+.cta-button {
+  display: inline-block;
+  background: #8b6f47;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.cta-button:hover {
+  background: #6b5537;
+  transform: translateX(5px);
+}
+
+.expand-toggle-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #8b6f47;
+  padding: 10px 0;
+  margin-top: auto;
+  transition: all 0.3s ease;
+}
+
+.expand-toggle-btn:hover {
+  gap: 15px;
+}
+
+.expand-toggle-btn svg {
+  transition: transform 0.3s ease;
+}
+
+.expand-toggle-btn svg.rotated {
+  transform: rotate(180deg);
+}
+
+/* Call to Action Section */
+.service-details-cta {
+  background: linear-gradient(135deg, #8b6f47 0%, #6b5537 100%);
+  color: #fff;
+  padding: 60px 40px;
+  text-align: center;
+  border-radius: 12px;
+  margin-top: 60px;
+}
+
+.service-details-cta h3 {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.service-details-cta p {
+  font-size: 16px;
+  margin-bottom: 30px;
+  opacity: 0.9;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.primary-cta-button {
+  display: inline-block;
+  background: #fff;
+  color: #8b6f47;
+  padding: 14px 40px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 700;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.primary-cta-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .service-details-heading {
+    font-size: 32px;
+  }
+
+  .services-details-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .service-detail-card {
+    max-height: none;
+  }
+
+  .service-detail-card.expanded {
+    grid-column: span 1;
+  }
+
+  .detail-card-image {
+    height: 200px;
+  }
+
+  .service-details-cta {
+    padding: 40px 25px;
+  }
+
+  .service-details-cta h3 {
+    font-size: 24px;
+  }
+
+  .detail-card-title {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .service-details-heading {
+    font-size: 24px;
+  }
+
+  .detail-card-content {
+    padding: 20px;
+  }
+
+  .detail-card-title {
+    font-size: 16px;
+  }
+
+  .detail-card-image {
+    height: 180px;
+  }
+
+  .expand-toggle-btn {
+    font-size: 12px;
+  }
+
+  .service-details-cta h3 {
+    font-size: 20px;
+  }
+
+  .primary-cta-button {
+    padding: 12px 30px;
+    font-size: 12px;
+  }
+}

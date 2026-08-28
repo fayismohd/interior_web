@@ -1,0 +1,130 @@
+.dual-btn-group {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.dual-btn-main,
+.dual-btn-arrow {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  font-family: var(--font-sans);
+  font-weight: 500;
+  font-size: 0.95rem;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  cursor: pointer;
+  transition: var(--transition-smooth);
+}
+
+.dual-btn-main {
+  height: 52px;
+  padding: 0 32px;
+  border-radius: 6px;
+}
+
+.dual-btn-arrow {
+  height: 52px;
+  width: 52px;
+  border-radius: 6px;
+  flex-shrink: 0;
+}
+
+/* Gold Variant */
+.dual-btn-group.gold .dual-btn-main,
+.dual-btn-group.gold .dual-btn-arrow {
+  background: var(--accent-gold-gradient);
+  color: var(--text-light);
+  box-shadow: 0 4px 15px rgba(181, 140, 61, 0.2);
+}
+
+.dual-btn-group.gold .dual-btn-main:hover,
+.dual-btn-group.gold .dual-btn-arrow:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(181, 140, 61, 0.35);
+  background: linear-gradient(135deg, #e5ba6b 0%, #c49945 100%);
+}
+
+.dual-btn-group.gold .dual-btn-main:active,
+.dual-btn-group.gold .dual-btn-arrow:active {
+  transform: translateY(0);
+}
+
+/* White Variant */
+.dual-btn-group.white .dual-btn-main,
+.dual-btn-group.white .dual-btn-arrow {
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  box-shadow: var(--shadow-md);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.dual-btn-group.white .dual-btn-main:hover,
+.dual-btn-group.white .dual-btn-arrow:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+  background: #fcfcfc;
+}
+
+.dual-btn-group.white .dual-btn-main:active,
+.dual-btn-group.white .dual-btn-arrow:active {
+  transform: translateY(0);
+}
+
+/* Arrow Rotation Hover Effect */
+.dual-btn-group:hover .dual-btn-arrow svg {
+  animation: arrowBounce 1s infinite alternate;
+}
+
+@keyframes arrowBounce {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(3px);
+  }
+}
+
+/* Responsive styles for DualButton */
+@media (max-width: 768px) {
+  .dual-btn-main,
+  .dual-btn-arrow {
+    height: 48px;
+    font-size: 0.9rem;
+  }
+  
+  .dual-btn-main {
+    padding: 0 28px;
+  }
+  
+  .dual-btn-arrow {
+    width: 48px;
+  }
+  
+  .dual-btn-group {
+    gap: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .dual-btn-main,
+  .dual-btn-arrow {
+    height: 44px;
+    font-size: 0.85rem;
+  }
+  
+  .dual-btn-main {
+    padding: 0 24px;
+  }
+  
+  .dual-btn-arrow {
+    width: 44px;
+  }
+  
+  .dual-btn-group {
+    gap: 6px;
+  }
+}

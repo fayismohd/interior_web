@@ -1,0 +1,246 @@
+.services-listing-section {
+  background: #fff;
+}
+
+.services-listing-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.services-tag {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.services-tag .section-tag-logo {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+}
+
+.services-tag .tag-label {
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #8b6f47;
+}
+
+.services-heading {
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #1a1a1a;
+}
+
+.services-heading .serif-italic {
+  font-style: italic;
+  color: #8b6f47;
+}
+
+.services-subtitle {
+  font-size: 16px;
+  color: #666;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Services Grid */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 30px;
+  margin-bottom: 60px;
+}
+
+.service-listing-card {
+  background: #f9f7f4;
+  border-radius: 12px;
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #e8e4df;
+  cursor: pointer;
+}
+
+.service-listing-card:hover {
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+  transform: translateY(-8px);
+}
+
+.service-card-image {
+  position: relative;
+  width: 100%;
+  height: 280px;
+  overflow: hidden;
+  background: #e8e4df;
+}
+
+.service-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.service-listing-card:hover .service-card-image img {
+  transform: scale(1.08);
+}
+
+.service-number {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: #8b6f47;
+  color: #fff;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  font-weight: 700;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.service-card-content {
+  padding: 30px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.service-card-content h3 {
+  font-size: 22px;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 12px;
+  line-height: 1.3;
+}
+
+.service-card-content p {
+  font-size: 15px;
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: auto;
+  padding-bottom: 15px;
+}
+
+.service-link-arrow {
+  color: #8b6f47;
+  font-weight: 700;
+  font-size: 14px;
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+
+.service-listing-card:hover .service-link-arrow {
+  gap: 8px;
+}
+
+/* Call to Action Section */
+.services-listing-cta {
+  background: linear-gradient(135deg, #8b6f47 0%, #6b5537 100%);
+  color: #fff;
+  padding: 60px 40px;
+  text-align: center;
+  border-radius: 12px;
+  margin-top: 60px;
+}
+
+.services-listing-cta h3 {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.services-listing-cta p {
+  font-size: 16px;
+  margin-bottom: 30px;
+  opacity: 0.9;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cta-button {
+  display: inline-block;
+  background: #fff;
+  color: #8b6f47;
+  padding: 14px 40px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 700;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.cta-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .services-heading {
+    font-size: 32px;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .service-card-image {
+    height: 220px;
+  }
+
+  .services-listing-cta {
+    padding: 40px 25px;
+  }
+
+  .services-listing-cta h3 {
+    font-size: 26px;
+  }
+
+  .service-card-content h3 {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .services-heading {
+    font-size: 24px;
+  }
+
+  .service-card-content {
+    padding: 20px;
+  }
+
+  .service-card-content h3 {
+    font-size: 16px;
+  }
+
+  .service-card-image {
+    height: 180px;
+  }
+
+  .services-listing-cta h3 {
+    font-size: 20px;
+  }
+
+  .cta-button {
+    padding: 12px 30px;
+    font-size: 12px;
+  }
+}
